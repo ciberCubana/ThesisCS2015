@@ -1,0 +1,3544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="mapeo.Aula" table="aula">
+        <id column="numero" name="numero"></id>
+        <property name="tipo" type="string">
+            <column name="tipo"/>
+        </property>
+    </class>
+    <class name="mapeo.Grupo" table="grupos">
+         <composite-id>
+            <key-property column="numero" name="numero"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="aulaConf" type="integer">
+            <column name="aulaConf"/>
+        </property>
+        <property name="aulaCp" type="integer">
+            <column name="aulaCp"/>
+        </property>
+    </class>
+    <class name="mapeo.Profesor" table="profesor">
+        <composite-id>
+            <key-property column="Nombre" name="nombre"/>
+            <key-property column="Asignatura" name="asignatura"/>
+            <key-property column="Apellidos" name="apellidos"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="conf" type="string">
+            <column name="imparteC"/>
+        </property>
+        <property name="cp" type="string">
+            <column name="imparteCp"/>
+        </property>
+        <property name="correo" type="string">
+            <column name="Correo"/>
+        </property>
+    </class>
+    <class name="mapeo.Asignatura" table="asignatura">
+        <composite-id>
+            <key-property column="nombre" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="abrev" type="string">
+            <column name="abrev"/>
+        </property>
+        <property name="cantHC" type="integer">
+            <column name="cantHC"/>
+        </property>
+        <property name="primera1" type="string">
+            <column name="s11"/>
+        </property>
+        <property name="primera2" type="string">
+            <column name="s21"/>
+        </property>
+        <property name="primera3" type="string">
+            <column name="s31"/>
+        </property>
+        <property name="primera4" type="string">
+            <column name="s41"/>
+        </property>
+        <property name="primera5" type="string">
+            <column name="s51"/>
+        </property>
+        <property name="primera6" type="string">
+            <column name="s61"/>
+        </property>
+        <property name="primera7" type="string">
+            <column name="s71"/>
+        </property>
+        <property name="primera8" type="string">
+            <column name="s81"/>
+        </property>
+        <property name="primera9" type="string">
+            <column name="s91"/>
+        </property>
+        <property name="primera10" type="string">
+            <column name="s101"/>
+        </property>
+        <property name="primera11" type="string">
+            <column name="s111"/>
+        </property>
+        <property name="primera12" type="string">
+            <column name="s121"/>
+        </property>
+        <property name="primera13" type="string">
+            <column name="s131"/>
+        </property>
+        <property name="primera14" type="string">
+            <column name="s141"/>
+        </property>
+        <property name="primera15" type="string">
+            <column name="s151"/>
+        </property>
+        <property name="primera16" type="string">
+            <column name="s161"/>
+        </property>
+        <property name="primera17" type="string">
+            <column name="s171"/>
+        </property>
+        <property name="segunda1" type="string">
+            <column name="s12"/>
+        </property>
+        <property name="segunda2" type="string">
+            <column name="s22"/>
+        </property>
+        <property name="segunda3" type="string">
+            <column name="s32"/>
+        </property>
+        <property name="segunda4" type="string">
+            <column name="s42"/>
+        </property>
+        <property name="segunda5" type="string">
+            <column name="s52"/>
+        </property>
+        <property name="segunda6" type="string">
+            <column name="s62"/>
+        </property>
+        <property name="segunda7" type="string">
+            <column name="s72"/>
+        </property>
+        <property name="segunda8" type="string">
+            <column name="s82"/>
+        </property>
+        <property name="segunda9" type="string">
+            <column name="s92"/>
+        </property>
+        <property name="segunda10" type="string">
+            <column name="s102"/>
+        </property>
+        <property name="segunda11" type="string">
+            <column name="s112"/>
+        </property>
+        <property name="segunda12" type="string">
+            <column name="s122"/>
+        </property>
+        <property name="segunda13" type="string">
+            <column name="s132"/>
+        </property>
+        <property name="segunda14" type="string">
+            <column name="s142"/>
+        </property>
+        <property name="segunda15" type="string">
+            <column name="s152"/>
+        </property>
+        <property name="segunda16" type="string">
+            <column name="s162"/>
+        </property>
+        <property name="segunda17" type="string">
+            <column name="s172"/>
+        </property>
+        <property name="tercera1" type="string">
+            <column name="s13"/>
+        </property>
+        <property name="tercera2" type="string">
+            <column name="s23"/>
+        </property>
+        <property name="tercera3" type="string">
+            <column name="s33"/>
+        </property>
+        <property name="tercera4" type="string">
+            <column name="s43"/>
+        </property>
+        <property name="tercera5" type="string">
+            <column name="s53"/>
+        </property>
+        <property name="tercera6" type="string">
+            <column name="s63"/>
+        </property>
+        <property name="tercera7" type="string">
+            <column name="s73"/>
+        </property>
+        <property name="tercera8" type="string">
+            <column name="s83"/>
+        </property>
+        <property name="tercera9" type="string">
+            <column name="s93"/>
+        </property>
+        <property name="tercera10" type="string">
+            <column name="s103"/>
+        </property>
+        <property name="tercera11" type="string">
+            <column name="s113"/>
+        </property>
+        <property name="tercera12" type="string">
+            <column name="s123"/>
+        </property>
+        <property name="tercera13" type="string">
+            <column name="s133"/>
+        </property>
+        <property name="tercera14" type="string">
+            <column name="s143"/>
+        </property>
+        <property name="tercera15" type="string">
+            <column name="s153"/>
+        </property>
+        <property name="tercera16" type="string">
+            <column name="s163"/>
+        </property>
+        <property name="tercera17" type="string">
+            <column name="s173"/>
+        </property>
+        <property name="cuarta1" type="string">
+            <column name="s14"/>
+        </property>
+        <property name="cuarta2" type="string">
+            <column name="s24"/>
+        </property>
+        <property name="cuarta3" type="string">
+            <column name="s34"/>
+        </property>
+        <property name="cuarta4" type="string">
+            <column name="s44"/>
+        </property>
+        <property name="cuarta5" type="string">
+            <column name="s54"/>
+        </property>
+        <property name="cuarta6" type="string">
+            <column name="s64"/>
+        </property>
+        <property name="cuarta7" type="string">
+            <column name="s74"/>
+        </property>
+        <property name="cuarta8" type="string">
+            <column name="s84"/>
+        </property>
+        <property name="cuarta9" type="string">
+            <column name="s94"/>
+        </property>
+        <property name="cuarta10" type="string">
+            <column name="s104"/>
+        </property>
+        <property name="cuarta11" type="string">
+            <column name="s114"/>
+        </property>
+        <property name="cuarta12" type="string">
+            <column name="s124"/>
+        </property>
+        <property name="cuarta13" type="string">
+            <column name="s134"/>
+        </property>
+        <property name="cuarta14" type="string">
+            <column name="s144"/>
+        </property>
+        <property name="cuarta15" type="string">
+            <column name="s154"/>
+        </property>
+        <property name="cuarta16" type="string">
+            <column name="s164"/>
+        </property>
+        <property name="cuarta17" type="string">
+            <column name="s174"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio1" table="labsem1">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio2" table="labsem2">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio3" table="labsem3">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio4" table="labsem4">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio5" table="labsem5">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio6" table="labsem6">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio7" table="labsem7">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio8" table="labsem8">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio9" table="labsem9">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio10" table="labsem10">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio11" table="labsem11">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio12" table="labsem12">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio13" table="labsem13">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio14" table="labsem14">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio15" table="labsem15">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio16" table="labsem16">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Laboratorio17" table="labsem17">
+        <composite-id>
+            <key-property column="nombreAsignatura" name="nombre"/>
+            <key-property column="carrera" name="carrera"/>
+            <key-property column="ano" name="ano"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones1" table="afectsem1">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    
+    
+    <class name="mapeo.Afectaciones2" table="afectsem2">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones3" table="afectsem3">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones4" table="afectsem4">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones5" table="afectsem5">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones6" table="afectsem6">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones7" table="afectsem7">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones8" table="afectsem8">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones9" table="afectsem9">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones10" table="afectsem10">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones11" table="afectsem11">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones12" table="afectsem12">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones13" table="afectsem13">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones14" table="afectsem14">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones15" table="afectsem15">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones16" table="afectsem16">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    <class name="mapeo.Afectaciones17" table="afectsem17">
+        <composite-id>
+            <key-property column="nombreProf" name="nombreProf"/>
+            <key-property column="nombreAsig" name="nombreAsig"/>
+        </composite-id>
+        <property name="lunes1" type="integer">
+            <column name="L1"/>
+        </property>
+        <property name="lunes2" type="integer">
+            <column name="L2"/>
+        </property>
+        <property name="lunes3" type="integer">
+            <column name="L3"/>
+        </property>
+        <property name="lunes4" type="integer">
+            <column name="L4"/>
+        </property>
+        <property name="lunes5" type="integer">
+            <column name="L5"/>
+        </property>
+        <property name="lunes6" type="integer">
+            <column name="L6"/>
+        </property>
+        <property name="martes1" type="integer">
+            <column name="M1"/>
+        </property>
+        <property name="martes2" type="integer">
+            <column name="M2"/>
+        </property>
+        <property name="martes3" type="integer">
+            <column name="M3"/>
+        </property>
+        <property name="martes4" type="integer">
+            <column name="M4"/>
+        </property>
+        <property name="martes5" type="integer">
+            <column name="M5"/>
+        </property>
+        <property name="martes6" type="integer">
+            <column name="M6"/>
+        </property>
+        <property name="miercoles1" type="integer">
+            <column name="MI1"/>
+        </property>
+        <property name="miercoles2" type="integer">
+            <column name="MI2"/>
+        </property>
+        <property name="miercoles3" type="integer">
+            <column name="MI3"/>
+        </property>
+        <property name="miercoles4" type="integer">
+            <column name="MI4"/>
+        </property>
+        <property name="miercoles5" type="integer">
+            <column name="MI5"/>
+        </property>
+        <property name="miercoles6" type="integer">
+            <column name="MI6"/>
+        </property>
+        <property name="jueves1" type="integer">
+            <column name="J1"/>
+        </property>
+        <property name="jueves2" type="integer">
+            <column name="J2"/>
+        </property>
+        <property name="jueves3" type="integer">
+            <column name="J3"/>
+        </property>
+        <property name="jueves4" type="integer">
+            <column name="J4"/>
+        </property>
+        <property name="jueves5" type="integer">
+            <column name="J5"/>
+        </property>
+        <property name="jueves6" type="integer">
+            <column name="J6"/>
+        </property>
+        <property name="viernes1" type="integer">
+            <column name="V1"/>
+        </property>
+        <property name="viernes2" type="integer">
+            <column name="V2"/>
+        </property>
+        <property name="viernes3" type="integer">
+            <column name="V3"/>
+        </property>
+        <property name="viernes4" type="integer">
+            <column name="V4"/>
+        </property>
+        <property name="viernes5" type="integer">
+            <column name="V5"/>
+        </property>
+        <property name="viernes6" type="integer">
+            <column name="V6"/>
+        </property>
+    </class>
+    
+    
+    
+</hibernate-mapping>
